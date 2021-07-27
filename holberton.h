@@ -7,6 +7,8 @@
 #include <string.h>
 #include <unistd.h>
 
+int iprint(char *s, int len);
+
 void rev_string(char *s);
 
 char *_strcpy(char *dest, char *src);

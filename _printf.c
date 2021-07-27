@@ -7,7 +7,7 @@
 int _printf(const char *format, ...)
 {
 	va_list vars;
-	int i = 0, j = 0, index;
+	int i = 0, j = 0;
 	char buffer[200] = {0};
 	/* char tmp[20]; */
 	char *str_arg;
@@ -49,12 +49,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-
-	for (index = 0; index < j; index++)
-	{
-		_putchar(buffer[index]);
-	}
+	iprint(buffer, j);
 	va_end(vars);
 	return (j);
 }
-
