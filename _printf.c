@@ -29,6 +29,10 @@ int _printf(const char *format, ...)
 					strcpy(&buffer[j], str_arg);
 					j += strlen(str_arg);
 					break;
+				case '%':
+					buffer[j] = format[i];
+                                        j++;
+					break;
 			}
 		}
 		else
