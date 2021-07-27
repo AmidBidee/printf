@@ -33,6 +33,13 @@ int _printf(const char *format, ...)
 					buffer[j] = format[i];
                                         j++;
 					break;
+				default:
+					--i;
+					buffer[j] = format[i];
+					j++;
+					break;
+
+
 			}
 		}
 		else
@@ -46,3 +53,4 @@ int _printf(const char *format, ...)
 	va_end(vars);
 	return (j);
 }
+
