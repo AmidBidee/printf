@@ -21,4 +21,6 @@ char * _itoa(int i, char *strout, int base);
 
 int _printf(const char *format, ...);
 
+char *convert(unsigned int num, int base);
+
 #endif

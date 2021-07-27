@@ -3,7 +3,7 @@
  * _printf - Print out formatted string to console
  * @format: formtted string
  * Return: Always 0
- */
+*/
 int _printf(const char *format, ...)
 {
 	va_list vars;
