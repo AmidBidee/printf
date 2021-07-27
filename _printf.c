@@ -8,9 +8,7 @@ int _printf(const char *format, ...)
 {
 	va_list vars;
 	int i = 0, j = 0;
-	char buffer[200] = {0};
-	/* char tmp[20]; */
-	char *str_arg;
+	char *str_arg, buffer[200] = {0};/* char tmp[20]; */
 
 	va_start(vars, format);
 	while (format && format[i])
@@ -31,15 +29,13 @@ int _printf(const char *format, ...)
 					break;
 				case '%':
 					buffer[j] = format[i];
-                                        j++;
+					j++;
 					break;
 				default:
 					--i;
 					buffer[j] = format[i];
 					j++;
 					break;
-
-
 			}
 		}
 		else
